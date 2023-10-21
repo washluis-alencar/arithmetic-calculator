@@ -26,12 +26,12 @@ COPY application application
 
 RUN mvn package -DskipTests
 
-FROM openjdk:11.0.15-slim as learn-management-system
+FROM openjdk:11.0.15-slim as arithmetic-calculator-api
 
 WORKDIR /app
 
-COPY --from=maven_build /build/application/target/*.jar /app/learn-management-system.jar
+COPY --from=maven_build /build/application/target/*.jar /app/arithmetic-calculator-api
 
 EXPOSE 8080
 
-CMD ["java", "-jar", "/app/learn-management-system.jar"]
+CMD ["java", "-jar", "/app/arithmetic-calculator-api.jar"]

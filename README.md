@@ -1,4 +1,4 @@
-# Learn Management System
+# Arithmetic Calculator API
 
 `API to provide a simple calculator functionality`
 
